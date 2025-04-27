@@ -19,8 +19,8 @@ class Branch(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)    
     google_map_link = models.CharField(max_length=255,null=True,blank=True)
     yandex_map_link = models.CharField(max_length=255,null=True,blank=True)
-    latitude = models.CharField(max_length=20)
-    longitude = models.CharField(max_length=20)
+    latitude = models.CharField(max_length=20, null=True, blank=True)
+    longitude = models.CharField(max_length=20, null=True, blank=True)
 
     def __str__(self) -> str:
         return self.name
